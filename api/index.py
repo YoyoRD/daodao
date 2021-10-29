@@ -42,6 +42,8 @@ def creat_a_new_comments(user_info, number, body):
 def creat_a_new_day_issue(user_info, time):
     requests_path = 'https://api.github.com/repos/' + user_info['user'] + '/' + user_info['source'] + '/issues'
     token = 'token ' + user_info['token']
+    print("requests_path",requests_path)
+    print("token",token)
     r = requests.post(requests_path,
                       json={"title": time,
                             "body": '叨叨提醒您，今天是：' + time},
