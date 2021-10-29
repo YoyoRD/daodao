@@ -3,7 +3,6 @@ function getLocalTime(nS) {
 }
 function getdddata(){
     var bbsurl = "https://daodao-chi.vercel.app/api?q=10"
-
     var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
     httpRequest.open('GET', bbsurl, true);//第二步：打开连接  将请求参数写在url中  ps:"./Ptest.php?name=test&nameone=testone"
     httpRequest.send();//第三步：发送请求  将请求参数写在URL中
