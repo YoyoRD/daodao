@@ -18,7 +18,10 @@ def creat_data(time, user_info, data, since):
         text = 'Execution: today has sent daodao, find issue, add comment!'
         creat_a_new_comments(user_info, judegement['last_issue_number'], data)
     else:
-        text = 'Execution: you did not send a message today, create an issue and add a comment!'
+        # text = 'Execution: you did not send a message today, create an issue and add a comment!'
+        text = 'https://api.github.com/repos/' + user_info['user'] + '/' + user_info['source'] + '/issues'+ str(
+        time) + '/comments'
+
         creat_a_new_day_issue(user_info, time)
         judegement = judge_time_excit(github_daodao_config(user_info, since), time)
         creat_a_new_comments(user_info, judegement['last_issue_number'], data)
